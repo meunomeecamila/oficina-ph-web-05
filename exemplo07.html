@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 04</title>
+    <script>
+        function processar(){
+            // vetor -> variável para reservar posições
+            // cada posição vai ter um índice que começa no 0
+            var i = 0, vetor = [];
+
+            do {
+                vetor[i++] = prompt("Informe o nome");
+            } while (confirm("Deseja informar outro nome?"));
+
+            resp.innerHT,Ç = "Nomes informados : <br/>";
+
+            // função for each é anonima porque não será reutilizada
+            // nesse caso, nome=posição do vetor e i=indice
+            // funções com seta se chamam arrow function
+            vetor.forEach((nome,i) => resp.innerHTML += `${i} - ${vetor[i]} <br/>`);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="processar()">ok</button>
+    <div id="resp"></div>
+</body>
+</html>
